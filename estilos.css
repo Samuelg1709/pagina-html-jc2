@@ -1,0 +1,91 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(imagenes/fondo.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+.barranav{
+    width: 900px;
+    margin :0 auto;
+    background-color: rgba(0, 0, 0, 0.534);
+    width: 100%;
+    clear: both;
+    display: table;
+    border-radius: 10px;
+    
+    
+}
+
+
+img {
+    width: 140px;
+    height: 90px;
+    float: left;
+    padding: 0;
+}
+
+ ul {
+    float: right;
+}
+
+
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 25px;
+    float: left;
+}   
+
+
+
+
+nav ul li a {
+
+padding: 0px ;
+text-decoration: none;
+color: white;
+font-family: 'Kanit', sans-serif;
+box-shadow: black;
+text-shadow: black;
+}
+
+.info {
+    position: absolute;
+    left: 25%;          
+    transform: translateX(-50%); 
+    background-color: rgba(169, 169, 169, 0.5);
+    height: 380px;
+    width: 300px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: 'Young Serif', serif;
+
+color: black;
+}
+
+.inicio  {
+    border-radius: 20px;
+    background-color: blue;
+    margin-top: 18px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+  
+
+
