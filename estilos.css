@@ -64,8 +64,8 @@ text-shadow: black;
     position: absolute;
     left: 25%;          
     transform: translateX(-50%); 
-    background-color: rgba(169, 169, 169, 0.5);
-    height: 380px;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 400px;
     width: 300px;
     padding: 20px;
     margin-top: 20px;
@@ -73,7 +73,7 @@ text-shadow: black;
     font-size: 18px;
     font-family: 'Young Serif', serif;
 
-color: black;
+color: white;
 }
 
 .inicio  {
