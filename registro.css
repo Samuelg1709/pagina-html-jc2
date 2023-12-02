@@ -112,4 +112,9 @@ button:hover {
     transition: all .3s ease-out;
     text-align: center;
 }
+@media (max-width: 768px) {
+    #registrationForm {
+        width: 90%;
+    }
+}
 

@@ -94,6 +94,34 @@ color: white;
     color: white;
     
 }
+@media (max-width: 768px) {
+    .barranav {
+        border-radius: 0; /* Quitar el redondeo en pantallas pequeñas */
+    }
+
+    img {
+        width: 100%; /* Hacer la imagen completamente adaptable */
+        max-width: none; /* Eliminar el máximo para permitir el crecimiento */
+        height: auto;
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+    }
+}
 
 
 
