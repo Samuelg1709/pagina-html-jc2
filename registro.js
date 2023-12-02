@@ -1,46 +1,48 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const registrationForm = document.getElementById("registrationForm");
-    const registerButton = document.getElementById("registerButton");
-    const visibleCheckbox = document.getElementById("visible");
-    const passwordInput = document.getElementById("password");
-    const confirmPasswordInput = document.getElementById("confirmPassword");
+document.addEventListener("DOMContentLoaded", function () {
+   
+    var form = document.getElementById("registrationForm");
+    var registerButton = document.getElementById("registerButton");
+    var passwordField = document.getElementById("password");
+    var confirmPasswordField = document.getElementById("confirmPassword");
+    var showPasswordCheckbox = document.getElementById("visible");
 
-    visibleCheckbox.addEventListener("change", function() {
-        // Cambiar el tipo de entrada del campo de contraseña entre "password" y "text"
-        passwordInput.type = visibleCheckbox.checked ? "text" : "password";
-        confirmPasswordInput.type = visibleCheckbox.checked ? "text" : "password";
-    });
+   
 
-    registerButton.addEventListener("click", function() {
-        const firstName = document.getElementById("firstName").value;
-        const lastName = document.getElementById("lastName").value;
-        const email = document.getElementById("email").value;
-        const password = passwordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
-        const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : null;
+    registerButton.addEventListener("click", function () {
+        var loginPage = "login.html"; 
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = passwordField.value;
+        var confirmPassword = confirmPasswordField.value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
 
-        
         if (password !== confirmPassword) {
-            alert("Las contraseñas no coinciden");
+            
             return;
         }
 
-        
-        const userData = {
-            firstName: firstName,
-            lastName: lastName,
+        var userData = {
+            username: firstName,
+            lastname: lastName,
             email: email,
             password: password,
             gender: gender
         };
 
-       
         localStorage.setItem("userData", JSON.stringify(userData));
 
-       
-        console.log("Datos del usuario registrados:", userData);
+     
+        alert("Registro exitoso");
 
-        
+
         window.location.href = "login.html";
+    });
+
+    
+    showPasswordCheckbox.addEventListener("change", function () {
+     
+        passwordField.type = showPasswordCheckbox.checked ? "text" : "password";
+        confirmPasswordField.type = showPasswordCheckbox.checked ? "text" : "password";
     });
 });

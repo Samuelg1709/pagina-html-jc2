@@ -1,31 +1,32 @@
-const $submit = document.getElementById("submit"),
-      $password = document.getElementById("password"),
-      $username = document.getElementById("username"),
-      $visible = document.getElementById("visible");
+document.addEventListener("DOMContentLoaded", function () {
+    var loginForm = document.getElementById("loginForm");
+    var usernameField = document.getElementById("username");
+    var passwordField = document.getElementById("password");
+    var showPasswordCheckbox = document.getElementById("visible");
 
-if ($submit && $password && $username && $visible) {
-    
-    $visible.addEventListener("change", function() {
-        $password.type = $visible.checked ? "text" : "password";
-    });
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    document.addEventListener("submit", function(e) {
- 
-        if ($visible.checked) {
-      
-            $password.type = "text";
+       
+        var storedUserData = localStorage.getItem("userData");
+
+        if (storedUserData) {
+            var userData = JSON.parse(storedUserData);
+
+            
+            if (usernameField.username === userData.mail && passwordField.value === userData.password) {
+                alert("Inicio de sesión exitoso");
+                window.location.href = "./sesion.html";
+            } else {
+                alert("Credenciales incorrectas");
+            }
+        } else {
+            alert("No hay usuario registrado. Regístrate primero.");
         }
-        
     });
-} else {
-    console.error("Alguno de los elementos no existe en el documento.");
-}
-document.addEventListener("click", (e)=> {
-if(e.target === $submit){
-    if($password.value !== "" && $username.value !== "" ){
-        e.preventDefault();
-        window.location.href = "cerrar.html";
 
-    }
-}
-})
+    showPasswordCheckbox.addEventListener("change", function () {
+        
+        passwordField.type = showPasswordCheckbox.checked ? "text" : "password";
+    });
+});

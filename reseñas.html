@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="reseñas.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-
-        
-        
     </style>
     <title>DEJANOS TU OPINION!</title>
 </head>
@@ -26,11 +23,12 @@
             <span class="estrella" onclick="seleccionarEstrella(5)">&#9733;</span>
         </div>
 
-        <textarea placeholder="Escribe tu reseña aquí..." rows="4"></textarea>
+        <textarea id="resenaTextarea" placeholder="Escribe tu reseña aquí..." rows="4"></textarea>
     
-        <button>Enviar Reseña</button>
+        <button onclick="enviarResena()">Enviar Reseña</button>
     </main>
 
-    <script src="reseña.js"></script>
+    <script src="estrellas.js"></script>
+  
 </body>
 </html>

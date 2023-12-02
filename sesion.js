@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var userData = JSON.parse(storedUserData);
 
         
-        usernameDisplay.textContent = userData.usernameDisplay;  // Ajusta esta línea según la propiedad correcta
-
+        usernameDisplay.textContent = userData.username;  
         
         userContainer.style.display = "block";
         loginLink.style.display = "none";
