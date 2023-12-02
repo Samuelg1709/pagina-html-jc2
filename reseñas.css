@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: url(imagenes/Negro\ Blanco\ Fotografía\ Contabilidad\ Servicio\ Sitio\ Web.png);
+  }
+
+  header {
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+  }
+
+  main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: red;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+ 
+.rating .estrella.seleccionada {
+    color: gold; 
+}
+
+
+.rating .estrella {
+    font-size: 24px; 
+    cursor: pointer;
+    color: gray; 
+}
+
+  textarea {
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }

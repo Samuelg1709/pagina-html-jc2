@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reseñas.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+        
+        
+    </style>
+    <title>DEJANOS TU OPINION!</title>
+</head>
+<body>
+    <header>
+        <h1>Califica Nuestros servicios</h1>
+    </header>
+    
+    <main>
+        <div class="rating" id="rating">
+            <span class="estrella" onclick="seleccionarEstrella(1)">&#9733;</span>
+            <span class="estrella" onclick="seleccionarEstrella(2)">&#9733;</span>
+            <span class="estrella" onclick="seleccionarEstrella(3)">&#9733;</span>
+            <span class="estrella" onclick="seleccionarEstrella(4)">&#9733;</span>
+            <span class="estrella" onclick="seleccionarEstrella(5)">&#9733;</span>
+        </div>
+
+        <textarea placeholder="Escribe tu reseña aquí..." rows="4"></textarea>
+    
+        <button>Enviar Reseña</button>
+    </main>
+
+    <script src="reseña.js"></script>
+</body>
+</html>
